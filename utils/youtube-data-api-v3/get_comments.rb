@@ -23,7 +23,7 @@ if !ENV['GCP_API_KEY']
 end
 
 API_KEY = ENV['GCP_API_KEY']
-COMMENT_PAGES = ENV['COMMENT_PAGES'] || 10
+COMMENT_PAGES = ENV['COMMENT_PAGES'].to_i || 10
 
 ARGV.each { |video_id|
   if video_id =~ /v=([^&]+)/
