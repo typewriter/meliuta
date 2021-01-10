@@ -1,0 +1,25 @@
+{
+  "short_name": "メリうた🐝",
+  "name": "メリうた🐝 - メリッサ・キンレンカさんのお歌非公開まとめサイト",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "48x48 32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "favicon-96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "apple-icon-180x180.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
