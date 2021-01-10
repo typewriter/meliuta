@@ -117,8 +117,8 @@ class App extends React.Component<{}, State> {
               tag: elements[9],
             };
           }).sort((a, b) => {
-            const songType = (songMap.get(a.songType) || 9) - (songMap.get(b.songType) || 9);
-            if (songType !== 0) return songType;
+            // const songType = (songMap.get(a.songType) || 9) - (songMap.get(b.songType) || 9);
+            // if (songType !== 0) return songType;
 
             const publishedAt = b.publishedAt.getTime() - a.publishedAt.getTime();
             return publishedAt;
