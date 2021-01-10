@@ -4,6 +4,8 @@ Unofficial Melissa Kinrenka's singing list.
 
 メリッサ・キンレンカさんが歌った曲をまとめた非公式の Web サイトデータと、そのためのスクリプト群です。
 
+- [メリうた🐝 - メリッサ・キンレンカさんのお歌非公式まとめサイト](https://meliuta.nyamikan.net/)
+
 予告なく公開を停止する場合があります。
 
 ## Melissa Kinrenka
