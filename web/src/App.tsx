@@ -118,7 +118,7 @@ const App = () => {
 
         setSongs(songs);
       });
-  });
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>
