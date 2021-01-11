@@ -29,7 +29,7 @@ function SongTable(props: Props) {
         headerStyle: { whiteSpace: 'nowrap' },
         rowStyle: { whiteSpace: 'nowrap' },
         padding: 'dense',
-        pageSize: 5,
+        pageSize: 10,
         pageSizeOptions: [5, 10, 20, 50, 100],
         showTitle: false,
       }}
@@ -37,9 +37,9 @@ function SongTable(props: Props) {
         {
           title: '', field: 'url', render: row => {
             if (row.url.includes("twitter.com")) {
-              return <div><a href={row.url}><Twitter style={{ verticalAlign: 'middle', display: 'inline-block' }} />ツイート</a></div>;
+              return <div><Link color="primary" href={row.url} rel="noopener" target="_blank"><Twitter style={{ verticalAlign: 'middle', display: 'inline-block', height: '48px' }} />ツイート</Link></div>;
             } else {
-              return <div><Link href={row.url} color="primary"><img src={row.thumbnailUrl} alt="" style={{ verticalAlign: 'middle', width: 64 }} /><YouTube style={{ verticalAlign: 'middle', display: 'inline-block' }} /></Link></div>;
+              return <div><Link href={row.url} color="primary" rel="noopener" target="_blank"><img src={row.thumbnailUrl} alt="" style={{ verticalAlign: 'middle', width: 64 }} /><YouTube style={{ verticalAlign: 'middle', display: 'inline-block' }} /></Link></div>;
             }
           }
         },
@@ -65,7 +65,7 @@ function SongTable(props: Props) {
         { title: '作詞作曲等', field: 'originalCreator' },
         { title: 'タグ', field: 'tag' },
         { title: '動画タイトル', field: 'title' },
-        { title: '動画公開日', field: 'publishedAt', render: row => <div>{row.publishedAt.toLocaleString("ja")}</div> },
+        { title: '動画公開日', field: 'publishedAt', render: row => <div>{row.publishedAt.toLocaleDateString("ja")}</div> },
       ]}
       // detailPanel={row =>
       //   <iframe title={row.title} src={row.url.replace("watch?v=", "embed/").replace("&t=", "?start=")} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>}
