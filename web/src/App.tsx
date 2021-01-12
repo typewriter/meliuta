@@ -17,7 +17,7 @@ import Paper from '@material-ui/core/Paper';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import { ArrowBack, FiberNew, MusicNote, Twitter, YouTube } from '@material-ui/icons';
+import { ArrowBack, FiberNew, LibraryMusic, MusicNote, Twitter, YouTube } from '@material-ui/icons';
 import React, { useEffect, useState } from 'react';
 import { Timeline } from 'react-twitter-widgets';
 import './App.css';
@@ -47,6 +47,20 @@ const latestSongs: {
     },
   ];
 
+const originalSongs: {
+  title: string;
+  embedUrl: string;
+}[] = [
+    {
+      title: "<strong>胎生</strong><br />うたさっきょくさくしみっくす：メリッサ・キンレンカ<br />絵：ととりか<br />編曲：友人１２３４５６７８９０",
+      embedUrl: "https://www.youtube.com/embed/dlVWaAQZPag",
+    },
+    {
+      title: "<strong>haze</strong><br/ >歌・作詞・作曲・mix：メリッサ・キンレンカ<br />イラスト：ohuton<br />編曲：友人ABCDEFG",
+      embedUrl: "https://www.youtube.com/embed/hhXeNNxovSE",
+    },
+  ];
+
 export interface Song {
   url: string;
   title: string;
@@ -59,14 +73,14 @@ export interface Song {
   tag: string;
 };
 
-const songMap: Map<string, number> = new Map([
-  ["動画", 1],
-  ["他チャンネル", 2],
-  ["歌枠", 3],
-  ["配信", 4],
-  ["Twitter", 5],
-  ["メンバー限定", 6],
-]);
+// const songMap: Map<string, number> = new Map([
+//   ["動画", 1],
+//   ["他チャンネル", 2],
+//   ["歌枠", 3],
+//   ["配信", 4],
+//   ["Twitter", 5],
+//   ["メンバー限定", 6],
+// ]);
 
 export const theme = createMuiTheme({
   palette: {
@@ -134,103 +148,126 @@ const App = () => {
         </AppBar>
         {
           showingAbout ?
-          <main>
-            <Container maxWidth="lg" className="s-container">
-              <Breadcrumbs className="ud-padding">
-                <Link color="inherit" href="#" onClick={() => showAbout(false)}>メリうた🐝</Link>
-                <Typography color="textPrimary">About</Typography>
-              </Breadcrumbs>
-              <Box lineHeight={1.7}>
-                <Typography>このサイトについて</Typography>
-                <ul>
-                  <li>
-                    <Link color="primary" href="https://nijisanji.ichikara.co.jp/">にじさんじ</Link>所属のバーチャルライバー、メリッサ・キンレンカさんの歌声がもっと聴きたくて個人で作った非公式のお歌まとめサイトです。<br />
-                    （アーカイブが残らない配信もちょくちょくあるので、基本的には一期一会を楽しみにしています）
-                  </li>
-                  <li>
-                    参考：<Link color="primary" href="https://levi-archives.site/">レヴィ・エリファ アーカイブス</Link>
-                  </li>
-                </ul>
-                <Typography>おことわり</Typography>
-                <ul>
-                  <li>情報には誤りや抜けが含まれるかもしれません。</li>
-                  <li>サムネイルの利用などは<Link color="primary" href="https://event.nijisanji.app/guidelines/">いちから 二次創作ガイドライン</Link>に準拠しています。</li>
-                  <li>メンバー限定動画の情報については、メンバー以外でも閲覧できる内容に基づき記載しています。</li>
-                  <li>アーカイブが削除された場合は、確認次第このサイトからも削除することがあります。</li>
-                  <li>アクセス分析のために Google Analytics を利用しています。 Cookie を使用したり、アクセスしたページを Google に送信することがあります。</li>
-                </ul>
-                <Typography>連絡先</Typography>
-                <ul>
-                  <li>
-                    開発・運営：たいぷらいたー (Twitter: <Link color="primary" href="https://twitter.com/no_clock">@no_clock</Link>, Mail: <Link color="primary" href="mailto:typewriter.noclock@gmail.com">typewriter.noclock@gmail.com</Link>)
-                  </li>
-                </ul>
-                <Link color="primary" href="#" onClick={() => showAbout(false)}><ArrowBack style={{ verticalAlign: 'middle', display: 'inline-block' }} /> もどる</Link>
-              </Box>
-            </Container>
-          </main> :
-          <main>
-            <Container maxWidth="lg" className="s-container">
-              <Paper variant="outlined" className="d-margin">
-                <Typography variant="body2">
-                  <Link color="primary" href="https://nijisanji.ichikara.co.jp/">にじさんじ</Link>所属のバーチャルライバー、メリッサ・キンレンカさんの歌声がもっと聴きたくて個人で作った非公式のお歌まとめサイトです。<br />
+            <main>
+              <Container maxWidth="lg" className="s-container">
+                <Breadcrumbs className="ud-padding">
+                  <Link color="inherit" href="#" onClick={() => showAbout(false)}>メリうた🐝</Link>
+                  <Typography color="textPrimary">About</Typography>
+                </Breadcrumbs>
+                <Box lineHeight={1.7}>
+                  <Typography>このサイトについて</Typography>
+                  <ul>
+                    <li>
+                      <Link color="primary" href="https://nijisanji.ichikara.co.jp/">にじさんじ</Link>所属のバーチャルライバー、メリッサ・キンレンカさんの歌がもっと聴きたくて個人で作った非公式のお歌まとめサイトです。<br />
                   （アーカイブが残らない配信もちょくちょくあるので、基本的には一期一会を楽しみにしています）
+                    </li>
+                    <li>
+                      参考：<Link color="primary" href="https://levi-archives.site/">レヴィ・エリファ アーカイブス</Link>
+                    </li>
+                  </ul>
+                  <Typography>おことわり</Typography>
+                  <ul>
+                    <li>情報には誤りや抜けが含まれるかもしれません。</li>
+                    <li>サムネイルの利用などは<Link color="primary" href="https://event.nijisanji.app/guidelines/">いちから 二次創作ガイドライン</Link>に準拠しています。</li>
+                    <li>メンバー限定動画の情報は、メンバー以外でも閲覧できる内容に基づいて記載しています。</li>
+                    <li>アーカイブが削除された場合は、確認次第このサイトからも削除することがあります。</li>
+                    <li>アクセス分析のために Google Analytics を利用しています。 Cookie を使用したり、アクセスしたページを Google に送信することがあります。</li>
+                  </ul>
+                  <Typography>連絡先</Typography>
+                  <ul>
+                    <li>
+                      開発・運営：たいぷらいたー (Twitter: <Link color="primary" href="https://twitter.com/no_clock">@no_clock</Link>, Mail: <Link color="primary" href="mailto:typewriter.noclock@gmail.com">typewriter.noclock@gmail.com</Link>)
+                    </li>
+                    <li>
+                      いちらんの追加・更新・削除にご協力いただける方は、<Link color="primary" href="https://forms.gle/ofLZ7LhzRQnkMzM58">いちらんの更新リクエスト</Link>にお寄せいただけますと幸いです。
+                    </li>
+                  </ul>
+                  <Link color="primary" href="#" onClick={() => showAbout(false)}><ArrowBack style={{ verticalAlign: 'middle', display: 'inline-block' }} /> もどる</Link>
+                </Box>
+              </Container>
+            </main> :
+            <main>
+              <Container maxWidth="lg" className="s-container">
+                <Paper variant="outlined" className="d-margin">
+                  <Typography variant="body2">
+                    <Link color="primary" href="https://nijisanji.ichikara.co.jp/">にじさんじ</Link>所属のバーチャルライバー、メリッサ・キンレンカさんの歌がもっと聴きたくて個人で作った非公式のお歌まとめサイトです。<br />
+                （アーカイブが残らない配信もちょくちょくあるので、基本的には一期一会を楽しみにしています）
+                  </Typography>
+                </Paper>
+                <Typography component="h6" variant="h6">
+                  <MusicNote /> いちらん
                 </Typography>
-              </Paper>
-              <Typography component="h6" variant="h6">
-                <MusicNote /> いちらん
-              </Typography>
-              <Typography variant="body2">
-                <YouTube style={{ verticalAlign: 'middle', display: 'inline-block' }} /> をクリックすると、 YouTube の動画がその位置から再生されます。なお、メンバー限定動画はメンバーでないと再生できません。<br />
-                <Twitter style={{ verticalAlign: 'middle', display: 'inline-block' }} /> はツイートが開きます。
-              </Typography>
-              <SongTable songs={songs} />
-            </Container>
-            <Container maxWidth="lg" className="s-container">
-              <Typography component="h6" variant="h6">
-                <FiberNew /> 最新の歌動画
-              </Typography>
-              <Grid container spacing={4}>
-                {latestSongs.slice(0, 1).map((song) => (
-                  <Grid item key={song.title} xs={12}>
-                    <Card>
-                      <CardContent>
-                        <div className="youtube-video">
-                          <iframe title={song.title} src={song.embedUrl} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </Grid>
-                ))}
-              </Grid>
-            </Container>
-            <Container maxWidth="lg" className="s-container">
-              <Typography component="h6" variant="h6">
-                メリッサ・キンレンカさん
-              </Typography>
-              <List>
-                <ListItem>
-                  <ListItemAvatar>
-                    <Avatar alt="メリッサ・キンレンカ" src="https://yt3.ggpht.com/ytc/AAUvwnhLcbb-bFY6iOEKdAK73QSFz547jev3H4s4YcUV=s88-c-k-c0x00ffffff-no-rj" />
-                  </ListItemAvatar>
-                  <ListItemText primary="メリッサ・キンレンカ" secondary={
-                    <span>
-                      <Link color="primary" href="https://www.youtube.com/channel/UCwcyyxn6h9ex4sMXGtpQE_g"><YouTube style={{ verticalAlign: 'middle', display: 'inline-block' }} />YouTube</Link><br />
-                      <Link color="primary" href="https://twitter.com/melissa_2434"><Twitter style={{ verticalAlign: 'middle', display: 'inline-block' }} />Twitter</Link>
-                    </span>
-                  } />
-                </ListItem>
-              </List>
-              <Timeline dataSource={{
-                sourceType: 'profile',
-                screenName: 'melissa_2434',
-              }}
-                options={{
-                  width: '320',
-                  height: '640',
-                }} />
-            </Container>
-          </main>
+                <Typography variant="body2">
+                  <YouTube style={{ verticalAlign: 'middle', display: 'inline-block' }} /> をクリックすると、 YouTube の動画がその位置から再生されます。なお、メンバー限定動画はメンバーでないと再生できません。<br />
+                  <Twitter style={{ verticalAlign: 'middle', display: 'inline-block' }} /> はツイートが開きます。
+                </Typography>
+                <SongTable songs={songs} />
+              </Container>
+              <Container maxWidth="lg" className="s-container">
+                <Typography component="h6" variant="h6">
+                  <FiberNew /> 最新の歌動画
+                </Typography>
+                <Grid container spacing={4}>
+                  {latestSongs.slice(0, 1).map((song) => (
+                    <Grid item key={song.title} xs={12}>
+                      <Card>
+                        <CardContent>
+                          {song.title}
+                          <div className="youtube-video">
+                            <iframe title={song.title} src={song.embedUrl} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </Grid>
+                  ))}
+                </Grid>
+              </Container>
+              <Container maxWidth="lg" className="s-container">
+                <Typography component="h6" variant="h6">
+                  <LibraryMusic /> オリジナル曲
+                </Typography>
+                <Grid container spacing={4}>
+                  {originalSongs.slice(0, 2).map((song) => (
+                    <Grid item key={song.title} xs={12} md={6}>
+                      <Card>
+                        <CardContent>
+                          <span dangerouslySetInnerHTML={{ __html: song.title }} />
+                          <div className="youtube-video">
+                            <iframe title={song.title} src={song.embedUrl} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </Grid>
+                  ))}
+                </Grid>
+              </Container>
+              <Container maxWidth="lg" className="s-container">
+                <Typography component="h6" variant="h6">
+                  メリッサ・キンレンカさん
+                </Typography>
+                <List>
+                  <ListItem>
+                    <ListItemAvatar>
+                      <Avatar alt="メリッサ・キンレンカ" src="https://yt3.ggpht.com/ytc/AAUvwnhLcbb-bFY6iOEKdAK73QSFz547jev3H4s4YcUV=s88-c-k-c0x00ffffff-no-rj" />
+                    </ListItemAvatar>
+                    <ListItemText primary="メリッサ・キンレンカ" secondary={
+                      <span>
+                        <Link color="primary" href="https://www.youtube.com/channel/UCwcyyxn6h9ex4sMXGtpQE_g"><YouTube style={{ verticalAlign: 'middle', display: 'inline-block' }} />YouTube</Link><br />
+                        <Link color="primary" href="https://twitter.com/melissa_2434"><Twitter style={{ verticalAlign: 'middle', display: 'inline-block' }} />Twitter</Link>
+                      </span>
+                    } />
+                  </ListItem>
+                </List>
+                <Timeline dataSource={{
+                  sourceType: 'profile',
+                  screenName: 'melissa_2434',
+                }}
+                  options={{
+                    width: '320',
+                    height: '640',
+                  }} />
+              </Container>
+            </main>
         }
       </div>
     </ThemeProvider>

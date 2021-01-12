@@ -62,7 +62,7 @@ function SongTable(props: Props) {
         },
         { title: '曲名', field: 'originalSongTitle' },
         { title: 'アーティスト', field: 'originalArtist' },
-        { title: '作詞作曲等', field: 'originalCreator' },
+        { title: '作詞作曲者など', field: 'originalCreator' },
         { title: 'タグ', field: 'tag' },
         { title: '動画タイトル', field: 'title' },
         { title: '動画公開日', field: 'publishedAt', render: row => <div>{row.publishedAt.toLocaleDateString("ja")}</div> },
