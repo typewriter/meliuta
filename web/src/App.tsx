@@ -158,7 +158,7 @@ const App = () => {
                   <Typography>このサイトについて</Typography>
                   <ul>
                     <li>
-                      <Link color="primary" href="https://nijisanji.ichikara.co.jp/">にじさんじ</Link>所属のバーチャルライバー、メリッサ・キンレンカさんの歌がもっと聴きたくて個人で作った非公式のお歌まとめサイトです。<br />
+                      <Link color="primary" href="https://nijisanji.ichikara.co.jp/">にじさんじ</Link>所属のバーチャルライバー、<Link color="primary" href="https://nijisanji.ichikara.co.jp/member/melissa-kinrenka/">メリッサ・キンレンカ</Link>さんの歌がもっと聴きたくて個人で作った非公式のお歌まとめサイトです。<br />
                   （アーカイブが残らない配信もちょくちょくあるので、基本的には一期一会を楽しみにしています）
                     </li>
                     <li>
@@ -190,7 +190,7 @@ const App = () => {
               <Container maxWidth="lg" className="s-container">
                 <Paper variant="outlined" className="d-margin">
                   <Typography variant="body2">
-                    <Link color="primary" href="https://nijisanji.ichikara.co.jp/">にじさんじ</Link>所属のバーチャルライバー、メリッサ・キンレンカさんの歌がもっと聴きたくて個人で作った非公式のお歌まとめサイトです。<br />
+                    <Link color="primary" href="https://nijisanji.ichikara.co.jp/">にじさんじ</Link>所属のバーチャルライバー、<Link color="primary" href="https://nijisanji.ichikara.co.jp/member/melissa-kinrenka/">メリッサ・キンレンカ</Link>さんの歌がもっと聴きたくて個人で作った非公式のお歌まとめサイトです。<br />
                 （アーカイブが残らない配信もちょくちょくあるので、基本的には一期一会を楽しみにしています）
                   </Typography>
                 </Paper>
