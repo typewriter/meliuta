@@ -30,6 +30,10 @@ const latestSongs: {
   embedUrl: string;
 }[] = [
     {
+      title: "celluloid",
+      embedUrl: "https://www.youtube.com/embed/8CUTuw-xJgc",
+    },
+    {
       title: "メビウス",
       embedUrl: "https://www.youtube.com/embed/h2YDbhEURZA",
     },
