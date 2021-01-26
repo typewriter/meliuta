@@ -218,7 +218,7 @@ const App = () => {
                         <CardContent>
                           {song.title}
                           <div className="youtube-video">
-                            <iframe title={song.title} src={song.embedUrl} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                            <iframe loading="lazy" title={song.title} src={song.embedUrl} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                           </div>
                         </CardContent>
                       </Card>
@@ -237,7 +237,7 @@ const App = () => {
                         <CardContent>
                           <span dangerouslySetInnerHTML={{ __html: song.title }} />
                           <div className="youtube-video">
-                            <iframe title={song.title} src={song.embedUrl} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                            <iframe loading="lazy" title={song.title} src={song.embedUrl} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                           </div>
                         </CardContent>
                       </Card>

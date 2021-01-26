@@ -1,7 +1,7 @@
 import Chip from "@material-ui/core/Chip";
 import Link from "@material-ui/core/Link";
 import { Twitter, YouTube } from "@material-ui/icons";
-import MaterialTable from "material-table";
+import MaterialTable from "@material-table/core";
 import React from "react";
 import { Song } from "./App";
 
