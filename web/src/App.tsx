@@ -19,9 +19,10 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { ArrowBack, FiberNew, LibraryMusic, MusicNote, Twitter, YouTube } from '@material-ui/icons';
 import React, { useEffect, useState } from 'react';
-import { Timeline } from 'react-twitter-widgets';
 import './App.css';
 import SongTable from './SongTable';
+import LazyYouTubePlayer from './LazyYouTubePlayer';
+import LazyTwitter from './LazyTwitter';
 
 const songUrl = "/songs.tsv";
 
@@ -217,9 +218,7 @@ const App = () => {
                       <Card>
                         <CardContent>
                           {song.title}
-                          <div className="youtube-video">
-                            <iframe loading="lazy" title={song.title} src={song.embedUrl} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                          </div>
+                          <LazyYouTubePlayer title={song.title} url={song.embedUrl} />
                         </CardContent>
                       </Card>
                     </Grid>
@@ -236,9 +235,7 @@ const App = () => {
                       <Card>
                         <CardContent>
                           <span dangerouslySetInnerHTML={{ __html: song.title }} />
-                          <div className="youtube-video">
-                            <iframe loading="lazy" title={song.title} src={song.embedUrl} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                          </div>
+                          <LazyYouTubePlayer title={song.title} url={song.embedUrl} />
                         </CardContent>
                       </Card>
                     </Grid>
@@ -262,14 +259,7 @@ const App = () => {
                     } />
                   </ListItem>
                 </List>
-                <Timeline dataSource={{
-                  sourceType: 'profile',
-                  screenName: 'melissa_2434',
-                }}
-                  options={{
-                    width: '320',
-                    height: '640',
-                  }} />
+                <LazyTwitter dataSource={{ sourceType: "profile", screenName: "melissa_2434" }} options={{ width: '320', height: '640' }} />
               </Container>
             </main>
         }

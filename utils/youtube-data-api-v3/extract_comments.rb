@@ -17,7 +17,7 @@ csv = CSV.generate do |csv|
     "https://www.youtube.com/watch?v=#{video["id"]}",
     video["snippet"]["title"],
     video["snippet"]["publishedAt"],
-    video.dig("snippet", "thumbnails", "standard", "url") || video.dig("snippet", "thumbnails", "high", "url")
+    video.dig("snippet", "thumbnails", "default", "url") || video.dig("snippet", "thumbnails", "medium", "url") || video.dig("snippet", "thumbnails", "high", "url") || video.dig("snippet", "thumbnails", "standard", "url")
   ]
   csv << base_line
 
