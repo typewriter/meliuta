@@ -60,12 +60,12 @@ function SongTable(props: Props) {
             }
           </div>,
         },
-        { title: '曲名', field: 'originalSongTitle' },
-        { title: 'アーティスト', field: 'originalArtist' },
+        { title: '曲名', field: 'originalSongTitle', render: row => <span dangerouslySetInnerHTML={{ __html: row.originalSongTitle }} /> },
+        { title: 'アーティスト', field: 'originalArtist', render: row => <span dangerouslySetInnerHTML={{ __html: row.originalArtist }} /> },
+        { title: '動画公開日', field: 'publishedAt', render: row => <div>{row.publishedAt.toISOString().substr(0, 10)}</div> },
         { title: '作詞作曲者など', field: 'originalCreator' },
         { title: 'タグ', field: 'tag' },
         { title: '動画タイトル', field: 'title' },
-        { title: '動画公開日', field: 'publishedAt', render: row => <div>{row.publishedAt.toLocaleDateString("ja")}</div> },
       ]}
       // detailPanel={row =>
       //   <iframe title={row.title} src={row.url.replace("watch?v=", "embed/").replace("&t=", "?start=")} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>}
