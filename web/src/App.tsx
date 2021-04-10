@@ -31,6 +31,10 @@ const latestSongs: {
   embedUrl: string;
 }[] = [
     {
+      title: "エンヴィーベイビー",
+      embedUrl: "https://www.youtube.com/embed/xz0iriPFNcA",
+    },
+    {
       title: "celluloid",
       embedUrl: "https://www.youtube.com/embed/8CUTuw-xJgc",
     },
