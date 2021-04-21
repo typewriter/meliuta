@@ -179,7 +179,7 @@ const App = () => {
                   </ul>
                   <Typography>おことわり</Typography>
                   <ul>
-                    <li>情報には誤りや抜けが含まれるかもしれません。</li>
+                    <li>非常に短いものなどは掲載していません。また、情報には誤りや抜けが含まれるかもしれません。</li>
                     <li>サムネイルの利用などは<Link color="primary" href="https://event.nijisanji.app/guidelines/">いちから 二次創作ガイドライン</Link>に準拠しています。</li>
                     <li>メンバー限定動画の情報は、メンバー以外でも閲覧できる内容に基づいて記載しています。</li>
                     <li>アーカイブが削除された場合は、確認次第このサイトからも削除することがあります。</li>
@@ -188,7 +188,7 @@ const App = () => {
                   <Typography>連絡先</Typography>
                   <ul>
                     <li>
-                      開発・運営：たいぷらいたー (Twitter: <Link color="primary" href="https://twitter.com/no_clock">@no_clock</Link>, Mail: <Link color="primary" href="mailto:typewriter.noclock@gmail.com">typewriter.noclock@gmail.com</Link>)
+                      開発・運営：たいぷらいた～ (Twitter: <Link color="primary" href="https://twitter.com/no_clock">@no_clock</Link>, Mail: <Link color="primary" href="mailto:typewriter.noclock@gmail.com">typewriter.noclock@gmail.com</Link>)
                     </li>
                     <li>
                       いちらんの追加・更新・削除にご協力いただける方は、<Link color="primary" href="https://forms.gle/ofLZ7LhzRQnkMzM58">いちらんの更新リクエスト</Link>にお寄せいただけますと幸いです。
