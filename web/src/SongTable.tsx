@@ -21,7 +21,7 @@ function SongTable(props: Props) {
         },
         toolbar: {
           searchTooltip: "検索",
-          searchPlaceholder: "種類, 曲名, アーティスト…",
+          searchPlaceholder: "たとえば「アカペラ」",
         },
       }}
       options={{
@@ -37,8 +37,10 @@ function SongTable(props: Props) {
           title: '', field: 'url', render: row => {
             if (row.url.includes("twitter.com")) {
               return <div><Link color="primary" href={row.url} rel="noopener" target="_blank"><Twitter style={{ verticalAlign: 'middle', display: 'inline-block', height: '48px' }} />ツイート</Link></div>;
-            } else {
+            } else if (row.url.includes("youtube.com")) {
               return <div><Link href={row.url} color="primary" rel="noopener" target="_blank"><img src={row.thumbnailUrl} alt="" style={{ verticalAlign: 'middle', width: 64 }} /><YouTube style={{ verticalAlign: 'middle', display: 'inline-block' }} /></Link></div>;
+            } else if (row.url.length > 0) {
+              return <div><Link href={row.url} color="primary" rel="noopener" target="_blank">リンク</Link></div>;
             }
           }
         },
