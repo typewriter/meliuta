@@ -86,7 +86,6 @@ export interface Song {
 
 const Home = () => {
     const [songs, setSongs] = useState<Song[]>([]);
-    const [showingAbout, showAbout] = useState(false);
 
     useEffect(() => {
         fetch(songUrl)

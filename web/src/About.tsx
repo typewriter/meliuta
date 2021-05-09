@@ -8,7 +8,7 @@ const About = () => {
         <main>
             <Container maxWidth="lg" className="s-container">
                 <Box lineHeight={1.7}>
-                    <Typography>このサイトについて</Typography>
+                    <Typography component="h6" variant="h6">ℹ️ このサイトについて</Typography>
                     <ul>
                         <li>
                             <Link color="primary" href="https://nijisanji.ichikara.co.jp/">にじさんじ</Link>所属のバーチャルライバー、<Link color="primary" href="https://nijisanji.ichikara.co.jp/member/melissa-kinrenka/">メリッサ・キンレンカ</Link>さんの歌がもっと聴きたくて個人で作った非公式のお歌まとめファンサイトです。<br />

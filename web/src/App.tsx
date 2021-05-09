@@ -3,7 +3,9 @@ import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import Toolbar from "@material-ui/core/Toolbar";
+import Tooltip from "@material-ui/core/Tooltip";
 import Typography from "@material-ui/core/Typography";
+import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,7 +13,7 @@ import {
   Link
 } from "react-router-dom";
 import About from "./About";
-import Consideration from "./Consideration";
+import Cooking from "./Cooking";
 import Home from "./Home";
 
 export const theme = createMuiTheme({
@@ -41,19 +43,30 @@ const App = () => (
             <Typography variant="h6" style={{ flexGrow: 1, fontWeight: 'bold' }}>
               メリうた🐝
             </Typography>
-            <Button component={Link} to="/">歌を聴く</Button>
-            {/*
-            <Button component={Link} to="/consideration">考察や考え方にふれる</Button>
-            */}
-            <Button component={Link} to="/about">このサイトについて</Button>
+            <Tooltip title="お歌">
+              <Button component={Link} to="/" title="お歌">🎵<br />お歌</Button>
+            </Tooltip>
+            {/* <Button component={Link} to="/consideration">歌をもっと知る</Button> */}
+            {/* <Tooltip title="ゲーム配信">
+              <Button component={Link} to="/game" title="ゲーム配信">🎮</Button>
+            </Tooltip> */}
+            <Tooltip title="お料理配信・レシピ">
+              <Button component={Link} to="/cooking" title="お料理配信・レシピ">🍙<br />お料理</Button>
+            </Tooltip>
+            <Tooltip title="このサイトについて">
+              <Button component={Link} to="/about" title="このサイトについて">ℹ️<br />このサイト</Button>
+            </Tooltip>
           </Toolbar>
         </AppBar>
         <Switch>
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/consideration">
+          {/* <Route path="/consideration">
             <Consideration />
+          </Route> */}
+          <Route path="/cooking">
+            <Cooking />
           </Route>
           <Route path="/">
             <Home />
