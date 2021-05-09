@@ -14,6 +14,7 @@ import {
 } from "react-router-dom";
 import About from "./About";
 import Cooking from "./Cooking";
+import Game from "./Game";
 import Home from "./Home";
 
 export const theme = createMuiTheme({
@@ -44,17 +45,17 @@ const App = () => (
               メリうた🐝
             </Typography>
             <Tooltip title="お歌">
-              <Button component={Link} to="/" title="お歌">🎵<br />お歌</Button>
+              <Button component={Link} to="/">🎵<br />お歌</Button>
             </Tooltip>
             {/* <Button component={Link} to="/consideration">歌をもっと知る</Button> */}
-            {/* <Tooltip title="ゲーム配信">
-              <Button component={Link} to="/game" title="ゲーム配信">🎮</Button>
-            </Tooltip> */}
+            <Tooltip title="ゲーム配信">
+              <Button component={Link} to="/game">🎮<br />ゲーム</Button>
+            </Tooltip>
             <Tooltip title="お料理配信・レシピ">
-              <Button component={Link} to="/cooking" title="お料理配信・レシピ">🍙<br />お料理</Button>
+              <Button component={Link} to="/cooking">🍙<br />お料理</Button>
             </Tooltip>
             <Tooltip title="このサイトについて">
-              <Button component={Link} to="/about" title="このサイトについて">ℹ️<br />このサイト</Button>
+              <Button component={Link} to="/about">ℹ️<br />このサイト</Button>
             </Tooltip>
           </Toolbar>
         </AppBar>
@@ -65,6 +66,9 @@ const App = () => (
           {/* <Route path="/consideration">
             <Consideration />
           </Route> */}
+          <Route path="/game">
+            <Game />
+          </Route>
           <Route path="/cooking">
             <Cooking />
           </Route>

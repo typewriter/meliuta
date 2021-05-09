@@ -18,7 +18,7 @@ const Cooking = () => {
                 <Typography component="h6" variant="h6">🍙 お料理配信・レシピ</Typography>
                 <Paper variant="outlined" className="d-margin">
                     <Typography variant="body2">
-                        お料理配信やレシピ・お料理写真のツイートを集めました。お腹が空いてきます。
+                        お料理配信やレシピ・お料理写真のツイートを集めました。お腹が空きます。
                     </Typography>
                 </Paper>
             </Container>
@@ -29,6 +29,15 @@ const Cooking = () => {
                     <Grid item xs={12} md={6}>
                         <Paper variant="outlined">
                             <Box m={1}>
+                                2020/11/07 配信
+                                <LazyYouTubePlayer title="昼のキッチン【メリッサ・キンレンカ/にじさんじ】" url="https://www.youtube.com/embed/sd8ypVUS4Pg" />
+                            </Box>
+                        </Paper>
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                        <Paper variant="outlined">
+                            <Box m={1}>
+                                2020/10/21 配信
                                 <LazyYouTubePlayer title="寝れない夜のスープづくり～白菜スープの巻き～【メリッサ・キンレンカ/にじさんじ】" url="https://www.youtube.com/embed/LNNIRBNZRko" />
                                 <LazyTweet url="https://twitter.com/melissa_2434/status/1318917059942649856?ref_src=twsrc%5Etfw" />
                             </Box>
@@ -37,6 +46,7 @@ const Cooking = () => {
                     <Grid item xs={12} md={6}>
                         <Paper variant="outlined">
                             <Box m={1}>
+                                2020/10/14 配信
                                 <LazyYouTubePlayer title="眠れない夜のスープづくり【メリッサ・キンレンカ/にじさんじ】" url="https://www.youtube.com/embed/fHzfpTRag7E" />
                                 <Grid container spacing={4}>
                                     <Grid item xs={12} md={6}>
@@ -133,7 +143,6 @@ const Cooking = () => {
                     </Grid>
                 </Grid>
             </Container>
-            <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
         </main >
     );
 };

@@ -36,8 +36,8 @@ const About = () => {
                             開発・運営：たいぷらいた～ (Twitter: <Link color="primary" href="https://twitter.com/no_clock">@no_clock</Link>, Mail: <Link color="primary" href="mailto:typewriter.noclock@gmail.com">typewriter.noclock@gmail.com</Link>)
                     </li>
                         <li>
-                            いちらんの追加・更新・削除にご協力いただける方は、<Link color="primary" href="https://forms.gle/ofLZ7LhzRQnkMzM58">いちらんの更新リクエスト</Link>にお寄せいただけますと幸いです。
-                    </li>
+                            情報の誤りなどありましたら、<Link color="primary" href="https://marshmallow-qa.com/no_clock">マシュマロ</Link>か上記連絡先までお願いします。
+                        </li>
                     </ul>
                 </Box>
             </Container>
