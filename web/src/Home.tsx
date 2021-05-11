@@ -130,6 +130,31 @@ const Home = () => {
                     </Grid>
                 </Grid>
             </Container>
+            {new Date().getDate() === 11 && new Date().getMonth() === 4 ?
+                <Container maxWidth="lg" className="s-container">
+                    <Grid container justify="center">
+                        <Grid item xs={12} sm={6}>
+                            <Card>
+                                <CardMedia component="img" image="/46604848122_578ec22436_w.jpg" />
+                                <CardContent>
+                                    <Typography variant="h6" align="center">
+                                        Happy birthday, Melissa Kinrenka! 🎉
+                        </Typography>
+                                    <Typography variant="body2" align="center">
+                                        5月11日はメリッサ・キンレンカさんのお誕生日です！
+                        </Typography>
+                                    <Typography variant="caption">
+                                        <small>photo: <Link href="https://flic.kr/p/2e1j2Eb">Bennilover</Link></small>
+                                    </Typography>
+
+                                </CardContent>
+                            </Card>
+                        </Grid>
+                    </Grid>
+                </Container>
+                :
+                <>
+                </>}
             <Container maxWidth="lg" className="s-container">
                 <Typography component="h6" variant="h6">
                     <FiberNew /> 最新の歌動画

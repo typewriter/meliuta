@@ -53,7 +53,11 @@ const App = () => (
         <AppBar position="relative" className="c-bar" color="secondary">
           <Toolbar>
             <Typography variant="h6" style={{ flexGrow: 1, fontWeight: 'bold' }}>
-              メリうた🐝
+              {new Date().getDate() === 11 && new Date().getMonth() === 4 ?
+                <Link href="/">メリうた🎉</Link>
+                :
+                <Link href="/">メリうた🐝</Link>
+              }
             </Typography>
             <Tooltip title="お歌">
               <Button component={RouterLink} to="/song">🎵<br />うた</Button>
