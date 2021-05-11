@@ -14,6 +14,7 @@ const About = () => {
                             <Link color="primary" href="https://nijisanji.ichikara.co.jp/">にじさんじ</Link>所属のバーチャルライバー、<Link color="primary" href="https://nijisanji.ichikara.co.jp/member/melissa-kinrenka/">メリッサ・キンレンカ</Link>さんの歌がもっと聴きたくて個人で作った非公式のお歌まとめファンサイトです。<br />
                             （歌枠は残らないことも多いので、基本的には一期一会を楽しみにしています）
                     </li>
+                        <li>ゲーム配信も良いな、お料理配信やレシピも良いな… と思ったらコンテンツが増えていました。</li>
                         <li>
                             メリッサ・キンレンカさんをもっと知る、そのきっかけになれば幸いです。
                     </li>
@@ -23,7 +24,6 @@ const About = () => {
                     </ul>
                     <Typography>おことわり</Typography>
                     <ul>
-                        <li>非常に短いものなどは掲載していません。また、情報には誤りや抜けが含まれるかもしれません。</li>
                         <li>サムネイルの利用などは<Link color="primary" href="https://event.nijisanji.app/guidelines/">いちから 二次創作ガイドライン</Link>に準拠しています。</li>
                         <li>メンバー限定動画の情報は、メンバー以外でも閲覧できる内容に基づいて記載しています。</li>
                         <li>アーカイブが削除された場合は、確認次第このサイトからも削除することがあります。</li>
@@ -36,7 +36,7 @@ const About = () => {
                             開発・運営：たいぷらいた～ (Twitter: <Link color="primary" href="https://twitter.com/no_clock">@no_clock</Link>, Mail: <Link color="primary" href="mailto:typewriter.noclock@gmail.com">typewriter.noclock@gmail.com</Link>)
                     </li>
                         <li>
-                            情報の誤りなどありましたら、<Link color="primary" href="https://marshmallow-qa.com/no_clock">マシュマロ</Link>か上記連絡先までお願いします。
+                            情報の誤りなどありましたら、<Link color="primary" href="https://marshmallow-qa.com/no_clock">マシュマロ</Link>か上記連絡先までこっそり教えていただけると助かります。
                         </li>
                     </ul>
                 </Box>
