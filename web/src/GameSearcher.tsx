@@ -10,6 +10,7 @@ import Typography from "@material-ui/core/Typography";
 import { YouTube } from "@material-ui/icons";
 import React, { useState } from "react";
 import { GameVideo } from "./Game";
+import { format } from "date-fns";
 
 interface Props {
   games: GameVideo[];
@@ -63,15 +64,15 @@ function GameSearcher(props: Props) {
           }
         </Box>
         <Typography component="h6" variant="h6">
-          {filter.length !== 0 ? `「${filter.join('・')}」の` : ""}ゲーム動画 ({filter.length !== 0 ? "新しい順" : "最新 20 件"})
+          {filter.length !== 0 ? `「${filter.join('・')}」の` : ""}ゲーム動画 ({filter.length !== 0 ? "新しい順" : "最新 30 件"})
         </Typography>
         <Grid container spacing={1}>
           {props.games.filter(
             (game) => filter.length === 0 ? true : filter.includes(game.gameName)
-          ).slice(0, 20).map((game) => (
+          ).slice(0, 30).map((game) => (
             <Grid item key={game.videoId} xs={12} sm={6} md={4}>
               <Paper variant="outlined">
-                <Box bgcolor="secondary.main">{game.publishedAt.toISOString().substr(0, 10)} 配信{filter.length !== 1 ? `/ ${game.gameName}` : ""}</Box>
+                <Box bgcolor={game.publishedAt.getTime() > new Date().getTime() ? "secondary.light" : "secondary.main"}>{format(game.publishedAt, 'yyyy/MM/dd')} {game.publishedAt.getTime() > new Date().getTime() ? `${format(game.publishedAt, 'HH:mm')}配信予定` : "配信"}{filter.length !== 1 ? `: ${game.gameName}` : ""}</Box>
                 <Grid container alignItems="center" wrap="nowrap">
                   <Grid item>
                     <Link href={`https://www.youtube.com/watch?v=${game.videoId}`} rel="noopener" target="_blank"><img src={game.thumbnailUrl} /></Link>

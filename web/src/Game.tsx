@@ -57,7 +57,7 @@ const Game = () => {
                 <Typography component="h6" variant="h6">🎮 ゲーム実況</Typography>
                 <Paper variant="outlined" className="d-margin">
                     <Typography variant="body2">
-                        これまでのゲーム配信が検索できます。
+                        これまでのゲーム配信を、ゲームごとに絞り込めます。
                     </Typography>
                 </Paper>
                 <GameSearcher games={games} />
