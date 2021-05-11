@@ -2,8 +2,9 @@ import Chip from "@material-ui/core/Chip";
 import Link from "@material-ui/core/Link";
 import { Twitter, YouTube } from "@material-ui/icons";
 import MaterialTable from "@material-table/core";
-import { Song } from "./Home";
 import './SongTable.css';
+import { Song } from "./Song";
+import { format } from "date-fns";
 
 interface Props {
   songs: Song[];
@@ -64,7 +65,7 @@ function SongTable(props: Props) {
         },
         { title: '曲名', field: 'originalSongTitle', render: row => <span dangerouslySetInnerHTML={{ __html: row.originalSongTitle }} /> },
         { title: 'アーティスト', field: 'originalArtist', render: row => <span dangerouslySetInnerHTML={{ __html: row.originalArtist }} /> },
-        { title: '動画公開日', field: 'publishedAt', render: row => <div>{row.publishedAt.toISOString().substr(0, 10)}</div> },
+        { title: '動画公開日', field: 'publishedAt', render: row => <div>{format(row.publishedAt, 'yyyy/MM/dd')}</div> },
         { title: '作詞作曲者など', field: 'originalCreator' },
         { title: 'タグ', field: 'tag' },
         { title: '動画タイトル', field: 'title' },
