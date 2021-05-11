@@ -24,7 +24,7 @@ function LazyTweet(props: Props) {
         <div ref={ref}>
             {inView ? (
                 <blockquote className="twitter-tweet">
-                    <a href={props.url}>Loading...</a>
+                    <a href={props.url}>ツイートを読み込んでいます...</a>
                 </blockquote>
             ) : null}
         </div>
