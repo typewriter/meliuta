@@ -4,6 +4,7 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import { Twitter, YouTube } from "@material-ui/icons";
 import React, { useEffect, useState } from "react";
+import LatestSong from "./LatestSong";
 import SongTable from "./SongTable";
 
 const songUrl = "/songs.tsv";
@@ -57,21 +58,28 @@ const Song = () => {
     return (
         <main>
             <Container maxWidth="lg" className="s-container">
+                <Paper variant="outlined" className="d-margin">
+                    <Typography variant="body2">
+                        <Link color="primary" href="https://nijisanji.ichikara.co.jp/">にじさんじ</Link>所属のバーチャルライバー、<Link color="primary" href="https://nijisanji.ichikara.co.jp/member/melissa-kinrenka/">メリッサ・キンレンカ</Link>さんの歌がもっと聴きたくて個人で作った非公式のお歌まとめファンサイトです。<br />
+                        （歌枠は残らないことも多いので、基本的には一期一会を楽しみにしています）
+                  </Typography>
+                </Paper>
                 <Typography component="h6" variant="h6">
                     🎵 うた
                 </Typography>
-                <Paper variant="outlined" className="d-margin">
+                {/* <Paper variant="outlined" className="d-margin">
                     <Typography variant="body2">
                         オリジナル曲・カバー曲のほか、配信内で歌われたものやツイートも掲載しています。<br />
                         （歌枠は残らないことも多いので、基本的には一期一会を楽しみにしています）
                     </Typography>
-                </Paper>
+                </Paper> */}
                 <Typography variant="body2">
                     <YouTube style={{ verticalAlign: 'middle', display: 'inline-block' }} /> をクリックすると、 YouTube の動画がその位置から再生されます。なお、メンバー限定動画はメンバーでないと再生できません。<br />
                     <Twitter style={{ verticalAlign: 'middle', display: 'inline-block' }} /> はツイートが開きます。
                 </Typography>
                 <SongTable songs={songs} />
             </Container>
+            <LatestSong />
         </main>
     );
 };

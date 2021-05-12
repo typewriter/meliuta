@@ -17,7 +17,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link as RouterLink
+  Link as RouterLink,
+  Redirect
 } from "react-router-dom";
 import Link from '@material-ui/core/Link';
 import About from "./About";
@@ -27,6 +28,7 @@ import Home from "./Home";
 import LazyTwitter from "./LazyTwitter";
 import Page from "./Page";
 import Song from "./Song";
+import './App.css';
 
 export const theme = createMuiTheme({
   palette: {
@@ -59,14 +61,14 @@ const App = () => (
                 <Link href="/">メリうた🐝</Link>
               }
             </Typography>
-            <Tooltip title="お歌">
+            <Tooltip title="お歌をもっと聴く！">
               <Button component={RouterLink} to="/song">🎵<br />うた</Button>
             </Tooltip>
             {/* <Button component={Link} to="/consideration">歌をもっと知る</Button> */}
-            <Tooltip title="ゲーム配信">
+            <Tooltip title="ゲーム配信を探す！">
               <Button component={RouterLink} to="/game">🎮<br />ゲーム</Button>
             </Tooltip>
-            <Tooltip title="お料理配信・レシピ">
+            <Tooltip title="お料理配信やレシピをみる！">
               <Button component={RouterLink} to="/cooking">🍙<br />お料理</Button>
             </Tooltip>
             <Tooltip title="このサイトについて">
@@ -74,36 +76,40 @@ const App = () => (
             </Tooltip>
           </Toolbar>
         </AppBar>
-        <Switch>
-          <Route path="/about">
-            <Page title="このサイトについて">
-              <About />
-            </Page>
-          </Route>
-          {/* <Route path="/consideration">
+        <main>
+          <Switch>
+            <Route path="/about">
+              <Page title="このサイトについて">
+                <About />
+              </Page>
+            </Route>
+            {/* <Route path="/consideration">
             <Consideration />
           </Route> */}
-          <Route path="/game">
-            <Page title="ゲーム実況">
-              <Game />
-            </Page>
-          </Route>
-          <Route path="/cooking">
-            <Page title="お料理配信・レシピ">
-              <Cooking />
-            </Page>
-          </Route>
-          <Route path="/song">
-            <Page title="うた">
-              <Song />
-            </Page>
-          </Route>
+            <Route path="/game">
+              <Page title="ゲーム実況">
+                <Game />
+              </Page>
+            </Route>
+            <Route path="/cooking">
+              <Page title="お料理配信・レシピ">
+                <Cooking />
+              </Page>
+            </Route>
+            <Redirect from="/song" to="/" />
+            <Route path="/">
+              <Page title="">
+                <Song />
+              </Page>
+            </Route>
+            {/* <Redirect from="/" to="/song" />
           <Route path="/">
             <Page>
               <Home />
             </Page>
-          </Route>
-        </Switch>
+          </Route> */}
+          </Switch>
+        </main>
         <Container maxWidth="lg" className="s-container">
           <Typography component="h6" variant="h6">
             🐝 メリッサ・キンレンカさん
