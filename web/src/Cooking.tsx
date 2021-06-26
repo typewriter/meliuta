@@ -67,15 +67,14 @@ const Cooking = () => {
                     <Grid item xs={12} md={6}>
                         <Paper variant="outlined">
                             <Box m={1}>
-                                <LazyTweet url="https://twitter.com/melissa_2434/status/1383362907476353029?ref_src=twsrc%5Etfw" />
+                                <LazyTweet url="https://twitter.com/melissa_2434/status/1408003001223061507?ref_src=twsrc%5Etfw" />
                             </Box>
                         </Paper>
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <Paper variant="outlined">
                             <Box m={1}>
-                                「ナムル的な何か」
-                                <LazyTweet url="https://twitter.com/melissa_2434/status/1368851021120696324?ref_src=twsrc%5Etfw" />
+                                <LazyTweet url="https://twitter.com/melissa_2434/status/1383362907476353029?ref_src=twsrc%5Etfw" />
                             </Box>
                         </Paper>
                     </Grid>

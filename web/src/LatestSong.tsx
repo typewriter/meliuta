@@ -12,6 +12,10 @@ const latestSongs: {
     embedUrl: string;
 }[] = [
         {
+            title: "絶え間なく藍色",
+            embedUrl: "https://www.youtube.com/embed/RpUUcL9zctY",
+        },
+        {
             title: "エンヴィーベイビー",
             embedUrl: "https://www.youtube.com/embed/xz0iriPFNcA",
         },
