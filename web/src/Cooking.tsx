@@ -67,6 +67,21 @@ const Cooking = () => {
                     <Grid item xs={12} md={6}>
                         <Paper variant="outlined">
                             <Box m={1}>
+                                「さっぱりカンカンカレー」
+                                <LazyTweet url="https://twitter.com/melissa_2434/status/1416342703785140224?ref_src=twsrc%5Etfw" />
+                            </Box>
+                        </Paper>
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                        <Paper variant="outlined">
+                            <Box m={1}>
+                                <LazyTweet url="https://twitter.com/melissa_2434/status/1415312551735271424?ref_src=twsrc%5Etfw" />
+                            </Box>
+                        </Paper>
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                        <Paper variant="outlined">
+                            <Box m={1}>
                                 <LazyTweet url="https://twitter.com/melissa_2434/status/1408003001223061507?ref_src=twsrc%5Etfw" />
                             </Box>
                         </Paper>
@@ -137,6 +152,14 @@ const Cooking = () => {
                             <Box m={1}>
                                 「万能肉団子」 活用レシピ
                                 <LazyTweet url="https://twitter.com/melissa_2434/status/1303909115958157312?ref_src=twsrc%5Etfw" />
+                            </Box>
+                        </Paper>
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                        <Paper variant="outlined">
+                            <Box m={1}>
+                                「食堂めりぃ」（メリッサ・キンレンカさんのモーメント）
+                                <a className="twitter-moment" href="https://twitter.com/i/moments/1416613409286615042?ref_src=twsrc%5Etfw">食堂めりぃ</a> <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
                             </Box>
                         </Paper>
                     </Grid>
