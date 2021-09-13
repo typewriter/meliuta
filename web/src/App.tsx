@@ -116,13 +116,13 @@ const App = () => (
             <Grid item key="calendar" xs={12} md={8}>
               <Typography component="h6" variant="h6">
                 📅 ボイス・グッズ販売カレンダー
-                </Typography>
+              </Typography>
               <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FTokyo&amp;src=YXQxbmdjamVtc3NiOGU1Y2pvMGE0czdrcTBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%237CB342&amp;showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTabs=0" style={{ borderWidth: 0 }} width="100%" height="600" frameBorder="0" scrolling="no"></iframe>
             </Grid>
             <Grid item key="twitter" xs={12} md={4}>
               <Typography component="h6" variant="h6">
                 🐝 メリッサ・キンレンカさん
-                </Typography>
+              </Typography>
               <List>
                 <ListItem>
                   <ListItemAvatar>
