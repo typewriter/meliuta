@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "nyamikan"
+  },
+  "targets": {
+    "nyamikan": {
+      "hosting": {
+        "meliuta": [
+          "meliuta"
+        ]
+      }
+    }
+  }
+}
