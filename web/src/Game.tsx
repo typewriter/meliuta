@@ -1,16 +1,8 @@
-import Box from '@material-ui/core/Box';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
 import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
-import Link from '@material-ui/core/Link';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import { LibraryMusic, MusicNote, Twitter, YouTube } from '@material-ui/icons';
 import React, { useEffect, useState } from 'react';
 import GameSearcher from './GameSearcher';
-import LazyTweet from './LazyTweet';
-import LazyYouTubePlayer from './LazyYouTubePlayer';
 
 export interface GameVideo {
     videoId: string;

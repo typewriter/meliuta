@@ -9,7 +9,7 @@ import SongTable from "./SongTable";
 
 const songUrl = "/songs.tsv";
 
-export interface Song {
+export interface SongItem {
     url: string;
     title: string;
     publishedAt: Date;
@@ -22,7 +22,7 @@ export interface Song {
 };
 
 const Song = () => {
-    const [songs, setSongs] = useState<Song[]>([]);
+    const [songs, setSongs] = useState<SongItem[]>([]);
 
     useEffect(() => {
         fetch(songUrl)
@@ -62,7 +62,7 @@ const Song = () => {
                     <Typography variant="body2">
                         <Link color="primary" href="https://nijisanji.ichikara.co.jp/">にじさんじ</Link>所属のバーチャルライバー、<Link color="primary" href="https://nijisanji.ichikara.co.jp/member/melissa-kinrenka/">メリッサ・キンレンカ</Link>さんの歌がもっと聴きたくて個人で作った非公式のお歌まとめファンサイトです。<br />
                         （歌枠は残らないことも多いので、基本的には一期一会を楽しみにしています）
-                  </Typography>
+                    </Typography>
                 </Paper>
                 <Typography component="h6" variant="h6">
                     🎵 うた
