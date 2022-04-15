@@ -60,7 +60,7 @@ const Song = () => {
             <Container maxWidth="lg" className="s-container">
                 <Paper variant="outlined" className="d-margin">
                     <Typography variant="body2">
-                        <Link color="primary" href="https://nijisanji.ichikara.co.jp/">にじさんじ</Link>所属のバーチャルライバー、<Link color="primary" href="https://nijisanji.ichikara.co.jp/member/melissa-kinrenka/">メリッサ・キンレンカ</Link>さんの歌がもっと聴きたくて個人で作った非公式のお歌まとめファンサイトです。<br />
+                        <Link color="primary" href="https://www.nijisanji.jp/">にじさんじ</Link>所属のバーチャルライバー、<Link color="primary" href="https://www.nijisanji.jp/members/melissa-kinrenka">メリッサ・キンレンカ</Link>さんの歌がもっと聴きたくて個人で作った非公式のお歌まとめファンサイトです。<br />
                         （歌枠は残らないことも多いので、基本的には一期一会を楽しみにしています）
                     </Typography>
                 </Paper>

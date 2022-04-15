@@ -20,5 +20,5 @@ Unofficial Melissa Kinrenka's singing list.
 ## License
 
 - ソースコード・コンテンツ: MIT License
-- データ: [いちから 二次創作ガイドライン](https://event.nijisanji.app/guidelines/) 準拠
+- データ: [ANYCOLOR二次創作ガイドライン](https://event.nijisanji.app/guidelines/) 準拠
 
