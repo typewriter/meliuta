@@ -1,4 +1,4 @@
-手動入力	API 自動取得			URL自動計算	手動入力				
+	API 自動取得			URL自動計算	手動入力				
 YouTubeリンク	動画タイトル	投稿日	サムネイルURL	再生位置	タイプ	曲名	原曲歌唱	作詞・作曲他	タグ（カンマ区切り）
 https://www.youtube.com/watch?v=1tRP2dv9HgU	香水一番	2020-08-09T12:26:04Z	https://i.ytimg.com/vi/1tRP2dv9HgU/default.jpg		メンバー限定	香水	瑛人	作詞・作曲：瑛人	
 https://www.youtube.com/watch?v=gcGS1W8hG5E	あわせただけおとふぁじ	2020-05-26T12:14:51Z	https://i.ytimg.com/vi/gcGS1W8hG5E/default.jpg		メンバー限定	オートファジー	柊キライ feat.flower		
@@ -180,3 +180,7 @@ https://www.youtube.com/watch?v=mqymu1uqx2k&t=2114	きえないじゅんびし�
 https://www.youtube.com/watch?v=mqymu1uqx2k&t=2626	きえないじゅんびしつ歌	2021-09-07T21:30:00Z	https://i.ytimg.com/vi/mqymu1uqx2k/default.jpg		歌枠	余所事	におP	歌唱：鏡音リン	
 https://twitter.com/melissa_2434/status/1437262555467051009	かいかいきたん👻	2021-09-13T03:51:00Z			Twitter	廻廻奇譚	Eve	Lyrics/Music/Vocal: Eve、Arrangement: Numa	Twitter,短め
 https://twitter.com/melissa_2434/status/1437257067958472705	お勉強しといてよ✏️	2021-09-13T03:29:00Z			Twitter	お勉強しといてよ	ずっと真夜中でいいのに。	Lyrics & Music & Vocal: ACAね、Arrangement: 矢野達也, 100回嘔吐, ZTMY	Twitter,短め
+https://www.youtube.com/watch?v=LaRnUDpVa1Y	へべれけジャンキー/ メリッサ・キンレンカ Cover	2021-09-24T11:00:14Z	https://i.ytimg.com/vi/LaRnUDpVa1Y/default.jpg		動画	へべれけジャンキー	syudou		カバー
+https://twitter.com/melissa_2434/status/1476157955578167299	†	2021-12-29T11:47:00Z			Twitter	神っぽいな	ピノキオピー	歌唱：初音ミク、作詞・作曲：ピノキオピー	Twitter,短め
+https://www.youtube.com/watch?v=jU2SkMLSFeM	【3D LIVE】メイフで『気分上々↑↑』歌ってみた【#NJU歌謡祭2021】	2022-01-21T14:09:32Z	https://i.ytimg.com/vi/jU2SkMLSFeM/default.jpg		他チャンネル	気分上々↑↑	mihimaru GT	作詞：hiroko & mitsuyuki miyake、作曲：mitsuyuki miyake & Shifo & 日比野元気	コラボ,メイフ,イブラヒム,フレン・E・ルスタリオ
+https://www.youtube.com/watch?v=zoynMroawZw&t=5820	#NJU歌謡祭2021 / 後半	2021-12-31T14:06:32Z	https://i.ytimg.com/vi/zoynMroawZw/default.jpg		他チャンネル	怪物さん feat. あいみょん	平井堅	作詞・作曲：平井堅	コラボ,あきメリ,三枝明那
