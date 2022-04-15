@@ -3,11 +3,11 @@ import Link from "@material-ui/core/Link";
 import { Twitter, YouTube } from "@material-ui/icons";
 import MaterialTable from "@material-table/core";
 import './SongTable.css';
-import { Song } from "./Song";
+import { SongItem } from "./Song";
 import { format } from "date-fns";
 
 interface Props {
-  songs: Song[];
+  songs: SongItem[];
 }
 
 function SongTable(props: Props) {

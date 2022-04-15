@@ -1,6 +1,4 @@
 import Box from "@material-ui/core/Box";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
 import Chip from "@material-ui/core/Chip";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Grid from "@material-ui/core/Grid";
@@ -58,8 +56,8 @@ function GameSearcher(props: Props) {
                     onClick={() => setFilter([game[0]])}
                   />
                 )}
-              &nbsp;
-            </>
+                &nbsp;
+              </>
             ))
           }
         </Box>
@@ -75,7 +73,7 @@ function GameSearcher(props: Props) {
                 <Box bgcolor={game.publishedAt.getTime() > new Date().getTime() ? "secondary.light" : "secondary.main"}>{format(game.publishedAt, 'yyyy/MM/dd')} {game.publishedAt.getTime() > new Date().getTime() ? `${format(game.publishedAt, 'HH:mm')}配信予定` : "配信"}{filter.length !== 1 ? `: ${game.gameName}` : ""}</Box>
                 <Grid container alignItems="center" wrap="nowrap">
                   <Grid item>
-                    <Link href={`https://www.youtube.com/watch?v=${game.videoId}`} rel="noopener" target="_blank"><img src={game.thumbnailUrl} /></Link>
+                    <Link href={`https://www.youtube.com/watch?v=${game.videoId}`} rel="noopener" target="_blank"><img alt="サムネイル" src={game.thumbnailUrl} /></Link>
                   </Grid>
                   <Grid item>
                     <Link href={`https://www.youtube.com/watch?v=${game.videoId}`} rel="noopener" target="_blank"><YouTube style={{ verticalAlign: 'middle', display: 'inline-block' }} /> {game.title}</Link>
