@@ -3,6 +3,7 @@ import Link from "@material-ui/core/Link";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import { Twitter, YouTube } from "@material-ui/icons";
+import Alert from "@material-ui/lab/Alert";
 import React, { useEffect, useState } from "react";
 import LatestSong from "./LatestSong";
 import SongTable from "./SongTable";
@@ -61,8 +62,10 @@ const Song = () => {
                 <Paper variant="outlined" className="d-margin">
                     <Typography variant="body2">
                         <Link color="primary" href="https://www.nijisanji.jp/">にじさんじ</Link>所属のバーチャルライバー、<Link color="primary" href="https://www.nijisanji.jp/members/melissa-kinrenka">メリッサ・キンレンカ</Link>さんの歌がもっと聴きたくて個人で作った非公式のお歌まとめファンサイトです。<br />
-                        （歌枠は残らないことも多いので、基本的には一期一会を楽しみにしています）
                     </Typography>
+                    <Alert severity="info">
+                        本サイトは2022年6月はじめごろにクローズする予定です。これまでありがとうございました。
+                    </Alert>
                 </Paper>
                 <Typography component="h6" variant="h6">
                     🎵 うた
