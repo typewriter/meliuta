@@ -11,8 +11,7 @@ const About = () => {
                     <Typography component="h6" variant="h6">ℹ️ このサイトについて</Typography>
                     <ul>
                         <li>
-                            <Link color="primary" href="https://www.nijisanji.jp/">にじさんじ</Link>所属のバーチャルライバー、<Link color="primary" href="https://www.nijisanji.jp/members/melissa-kinrenka">メリッサ・キンレンカ</Link>さんの歌がもっと聴きたくて個人で作った非公式のお歌まとめファンサイトです。<br />
-                            （歌枠は残らないことも多いので、基本的には一期一会を楽しみにしています）
+                            <Link color="primary" href="https://www.nijisanji.jp/">にじさんじ</Link>を2022年5月末に卒業されたバーチャルライバー、<Link color="primary" href="https://www.nijisanji.jp/members/melissa-kinrenka">メリッサ・キンレンカ</Link>さんの歌がもっと聴きたくて個人で作った非公式のお歌まとめファンサイトです。<br />
                         </li>
                         <li>ゲーム配信も良いな、お料理配信やレシピも良いな… と思ったらコンテンツが増えていました。</li>
                         <li>

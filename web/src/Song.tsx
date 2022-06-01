@@ -61,7 +61,7 @@ const Song = () => {
             <Container maxWidth="lg" className="s-container">
                 <Paper variant="outlined" className="d-margin">
                     <Typography variant="body2">
-                        <Link color="primary" href="https://www.nijisanji.jp/">にじさんじ</Link>所属のバーチャルライバー、<Link color="primary" href="https://www.nijisanji.jp/members/melissa-kinrenka">メリッサ・キンレンカ</Link>さんの歌がもっと聴きたくて個人で作った非公式のお歌まとめファンサイトです。<br />
+                        <Link color="primary" href="https://www.nijisanji.jp/">にじさんじ</Link>を2022年5月末に卒業されたバーチャルライバー、<Link color="primary" href="https://www.nijisanji.jp/members/melissa-kinrenka">メリッサ・キンレンカ</Link>さんの歌がもっと聴きたくて個人で作った非公式のお歌まとめファンサイトです。<br />
                     </Typography>
                     <Alert severity="info">
                         本サイトは2022年6月はじめごろにクローズする予定です。これまでありがとうございました。

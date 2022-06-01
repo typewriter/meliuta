@@ -65,7 +65,14 @@ function SongTable(props: Props) {
         },
         { title: '曲名', field: 'originalSongTitle', render: row => <span dangerouslySetInnerHTML={{ __html: row.originalSongTitle }} /> },
         { title: 'アーティスト', field: 'originalArtist', render: row => <span dangerouslySetInnerHTML={{ __html: row.originalArtist }} /> },
-        { title: '動画公開日', field: 'publishedAt', render: row => <div>{format(row.publishedAt, 'yyyy/MM/dd')}</div> },
+        {
+          title: '動画公開日', field: 'publishedAt', render: (row) => {
+            if (row.url === "https://www.youtube.com/watch?v=5dvQVMRlT5A&t=7094") {
+              return <div>2022/05/32</div>;
+            }
+            return <div>{format(row.publishedAt, 'yyyy/MM/dd')}</div>
+          }
+        },
         { title: '作詞作曲者など', field: 'originalCreator' },
         { title: 'タグ', field: 'tag' },
         { title: '動画タイトル', field: 'title' },
