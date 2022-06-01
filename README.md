@@ -6,7 +6,7 @@ Unofficial Melissa Kinrenka's singing list.
 
 - [メリうた🐝 - メリッサ・キンレンカさんのお歌非公式まとめサイト](https://meliuta.nyamikan.net/)
 
-予告なく公開を停止する場合があります。
+2022年5月末に卒業され、ほとんどが視聴できなくなったため、 Web サイトとしてはクローズしています。
 
 ## Melissa Kinrenka
 
